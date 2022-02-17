@@ -1,3 +1,77 @@
+:root {
+  --dark-blue: hsl(233, 26%, 24%);
+  --lime-green: hsl(136, 65%, 51%);
+  --bright-cyan: hsl(192, 70%, 51%);
+  --grayish-blue: hsl(233, 8%, 62%);
+  --light-grayish-blue: hsl(220, 16%, 96%);
+  --verylight-gray: hsl(0, 0%, 98%);
+}
+
+/* --- Typography --- */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.8rem;
+}
+
+:is(.header, .block__header, .features, .article__header) {
+  font-weight: 400;
+  color: var(--dark-blue);
+}
+
+.header {
+  font-size: 3.2rem;
+}
+
+.block__header {
+  font-size: 2.5rem;
+}
+
+.features {
+  font-size: 2rem;
+}
+
+.article__header {
+  font-size: 1.6rem;
+}
+
+p {
+  line-height: 1.6;
+  color: var(--grayish-blue);
+}
+
+@media screen and (min-width: 1440px) {
+  .header {
+    font-size: 4.5rem;
+  }
+
+  .block__header {
+    font-size: 3.2rem;
+  }
+
+  .features {
+    font-size: 2.5rem;
+  }
+
+  .article__header {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+}
+
+/* --- Blocks --- */
+
+.block-feats {
+  padding: 7rem 3rem;
+}
+
 /* --- Attribution --- */
 
 .attribution {

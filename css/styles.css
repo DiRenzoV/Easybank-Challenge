@@ -7,6 +7,18 @@
   --verylight-gray: hsl(0, 0%, 98%);
 }
 
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
 /* --- Typography --- */
 
 html {
@@ -21,22 +33,27 @@ body {
 :is(.header, .block__header, .features, .article__header) {
   font-weight: 400;
   color: var(--dark-blue);
+  text-shadow: 0 0 black;
 }
 
 .header {
   font-size: 3.2rem;
+  margin: 2rem 0;
 }
 
 .block__header {
   font-size: 2.5rem;
+  margin: 1.5rem 0;
 }
 
 .features {
   font-size: 2rem;
+  margin: 2.5rem 0;
 }
 
 .article__header {
   font-size: 1.6rem;
+  margin: 0.7rem;
 }
 
 p {
@@ -70,6 +87,89 @@ p {
 
 .block-feats {
   padding: 7rem 3rem;
+  text-align: center;
+}
+
+/* --- buttons --- */
+
+.btn {
+  background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+  color: white;
+  border: 0;
+  border-radius: 6rem;
+  padding: 1.3rem 3rem;
+  font-size: 1.5rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: linear-gradient(to right, rgb(102, 250, 122), rgb(99, 220, 250));
+}
+
+/* --- Nav --- */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+}
+
+.hamburger {
+  cursor: pointer;
+  width: 3rem;
+}
+
+.nav__links {
+  display: none;
+}
+
+.nav .btn {
+  display: none;
+}
+
+.close {
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .nav {
+    padding: 3rem 18rem;
+  }
+
+  .logo {
+    width: 16rem;
+  }
+
+  .nav__links {
+    display: block;
+  }
+
+  .nav .btn {
+    display: block;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+/* --- Lists --- */
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.list__item a {
+  color: var(--grayish-blue);
+  text-decoration: none;
+  text-shadow: 0 0 black;
+}
+
+.list__item a:hover {
+  color: var(--lime-green);
 }
 
 /* --- Attribution --- */

@@ -28,16 +28,17 @@ html {
 body {
   font-family: "Public Sans", sans-serif;
   font-size: 1.8rem;
+  position: relative;
 }
 
-:is(.header, .block__header, .features, .article__header) {
+:is(.header, .block__header, .features, .article__header, ) {
   font-weight: 400;
   color: var(--dark-blue);
   text-shadow: 0 0 black;
 }
 
 .header {
-  font-size: 3.2rem;
+  font-size: 3.8rem;
   margin: 2rem 0;
 }
 
@@ -59,11 +60,12 @@ body {
 p {
   line-height: 1.6;
   color: var(--grayish-blue);
+  text-shadow: 0 0 var(--grayish-blue);
 }
 
 @media screen and (min-width: 1440px) {
   .header {
-    font-size: 4.5rem;
+    font-size: 6rem;
   }
 
   .block__header {
@@ -80,6 +82,72 @@ p {
 
   p {
     font-size: 2rem;
+  }
+}
+
+/* --- Hero --- */
+
+.hero {
+  background: url(/images/bg-intro-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 50% -23%;
+  text-align: center;
+  padding: 0 3rem 10rem;
+}
+
+.phones img {
+  transform: scale(1.1) translateY(-25%);
+}
+
+.hero__text {
+  margin-top: -20%;
+}
+
+.hero .btn {
+  margin-top: 3rem;
+}
+
+.hero p {
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .hero {
+    background-image: none;
+    padding: 0 0 0 18rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: -16%;
+    overflow: hidden;
+  }
+
+  .phones {
+    transform: translatex(7rem);
+    order: 2;
+    background-image: url(/images/bg-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: -7rem -25rem;
+  }
+
+  .phones img {
+    transform: scale(1) translate(16%, -13%);
+  }
+
+  .hero__text {
+    margin: 0;
+    text-align: left;
+    max-width: 38%;
+    margin-top: -20%;
+  }
+
+  .hero p {
+    font-size: 2rem;
+  }
+
+  .hero .btn {
+    font-size: 1.8rem;
+    padding: 1.6rem 4rem;
   }
 }
 
@@ -113,6 +181,11 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 3rem;
+  background: white;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 .hamburger {
@@ -180,4 +253,9 @@ p {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.test {
+  background-color: lightgray;
+  height: 50vh;
 }

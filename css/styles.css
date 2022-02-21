@@ -208,14 +208,14 @@ p {
   text-align: left;
 }
 
-.article__image {
-  overflow: hidden;
+.article__image img {
   height: 200px;
 }
 
 .article__header {
   font-size: 1.6rem;
   margin: 1rem 0;
+  object-fit: cover;
 }
 
 .article__header a {
@@ -244,6 +244,7 @@ p {
 @media screen and (min-width: 1440px) {
   .block-articles {
     text-align: left;
+    padding: 7rem 18rem;
   }
 
   .article-container {
@@ -301,7 +302,7 @@ p {
 
 @media screen and (min-width: 1440px) {
   .nav {
-    padding: 3rem 18rem;
+    padding: 1.5rem 18rem;
   }
 
   .logo {
@@ -339,17 +340,88 @@ p {
   color: var(--lime-green);
 }
 
+/* --- Footer --- */
+
+.footer {
+  background: var(--dark-blue);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 6rem 3rem;
+}
+
+.logo-white {
+  margin: 0 auto;
+  width: 18rem;
+  margin-bottom: 3rem;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer-icon {
+  width: 3rem;
+  margin: 0;
+}
+
+.footer .list__item {
+  padding: 0.7rem;
+}
+
+.footer-list {
+  list-style: none;
+}
+
+.footer-list a {
+  color: var(--light-grayish-blue);
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.footer-list a:hover {
+  color: var(--lime-green);
+}
+
+.footer .btn {
+  margin-bottom: 2.5rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .footer {
+    padding: 5rem 18rem;
+    flex-direction: row;
+    gap: 10rem;
+  }
+
+  .footer-lists {
+    text-align: left;
+    gap: 10rem;
+    display: flex;
+  }
+
+  .footer__btn-holder {
+    text-align: right;
+    margin-left: auto;
+  }
+}
 /* --- Attribution --- */
 
 .attribution {
+  background: var(--dark-blue);
   font-size: 11px;
   text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  padding: 2rem;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--lime-green);
 }
 
-.test {
-  background-color: lightgray;
-  height: 50vh;
+.attribution a:hover {
+  color: var(--bright-cyan);
 }

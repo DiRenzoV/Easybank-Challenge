@@ -31,7 +31,7 @@ body {
   position: relative;
 }
 
-:is(.header, .block__header, .features, .article__header, ) {
+:is(.header, .block__header, .features, .article__header) {
   font-weight: 400;
   color: var(--dark-blue);
   text-shadow: 0 0 black;
@@ -212,6 +212,7 @@ p {
 @media screen and (min-width: 1024px) {
   .block-feats {
     text-align: left;
+    padding: 7rem 8rem;
   }
 
   .feats-container {
@@ -348,23 +349,67 @@ p {
 .hamburger {
   cursor: pointer;
   width: 3rem;
-}
-
-.nav__links {
-  display: none;
-}
-
-.nav .btn {
-  display: none;
+  display: grid;
+  place-items: center;
 }
 
 .close {
   display: none;
 }
 
+.nav__links {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.nav .btn {
+  display: none;
+}
+
+.nav__list {
+  text-align: center;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.active {
+  max-height: initial;
+  position: absolute;
+  top: 5.5rem;
+  background: white;
+  width: 85%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 100px rgb(59, 59, 59);
+  padding: 2rem;
+  font-size: 1.8rem;
+}
+
+.active .hamburger {
+}
+
 @media screen and (min-width: 768px) {
   .nav {
     padding: 1.5rem 8rem;
+  }
+
+  .nav__list {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav__links {
+    max-height: fit-content;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .nav .btn {
+    display: block;
   }
 }
 
@@ -379,14 +424,6 @@ p {
 
   .nav__links {
     display: block;
-  }
-
-  .nav .btn {
-    display: block;
-  }
-
-  .hamburger {
-    display: none;
   }
 }
 
@@ -492,7 +529,7 @@ p {
 .attribution {
   background: var(--dark-blue);
   font-size: 11px;
-  text-align: center;
+  text-align: left;
   color: white;
   font-size: 1.5rem;
   padding: 2rem;
@@ -503,4 +540,22 @@ p {
 
 .attribution a:hover {
   color: var(--bright-cyan);
+}
+
+@media screen and (min-width: 768px) {
+  .attribution {
+    padding: 2rem 8rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .attribution {
+    padding: 5rem 8rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .attribution {
+    padding: 5rem 18rem;
+  }
 }

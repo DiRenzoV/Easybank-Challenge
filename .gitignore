@@ -19,6 +19,10 @@ README-template.md
 README.md
 design
 
+dist
+node_modules
+.cache
+
 
 
 

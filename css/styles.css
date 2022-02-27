@@ -386,9 +386,6 @@ p {
   font-size: 1.8rem;
 }
 
-.active .hamburger {
-}
-
 @media screen and (min-width: 768px) {
   .nav {
     padding: 1.5rem 8rem;
@@ -456,7 +453,7 @@ p {
   padding: 6rem 3rem;
 }
 
-.logo-white {
+.logo-footer {
   margin: 0 auto;
   width: 18rem;
   margin-bottom: 3rem;
@@ -465,12 +462,20 @@ p {
 .icons {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  align-items: center;
+  gap: 3rem;
+}
+
+.footer-icon:hover path {
+  fill: var(--lime-green);
 }
 
 .footer-icon {
-  width: 3rem;
-  margin: 0;
+  transform: scale(1.5);
+}
+
+.footer-icon:hover path {
+  fill: var(--lime-green);
 }
 
 .footer .list__item {
@@ -558,4 +563,12 @@ p {
   .attribution {
     padding: 5rem 18rem;
   }
+}
+
+/* -------------------------------------------------- */
+/* -------------------------------------------------- */
+/* -------------------------------------------------- */
+
+.logo-test path {
+  fill: white;
 }

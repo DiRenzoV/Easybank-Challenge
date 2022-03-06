@@ -271,6 +271,7 @@ p {
 .article__header a {
   text-decoration: none;
   color: var(--dark-blue);
+  transition: 0.2s;
 }
 
 .article__header a:hover {
@@ -360,6 +361,7 @@ p {
 .nav__links {
   max-height: 0;
   overflow: hidden;
+  transition: box-shadow 0.2s ease-in-out;
 }
 
 .nav .btn {
@@ -379,9 +381,8 @@ p {
   top: 5.5rem;
   background: white;
   width: 85%;
-  margin: 0 auto;
   border-radius: 10px;
-  box-shadow: 0 0 100px rgb(59, 59, 59);
+  box-shadow: 0 0 150px 80px rgb(70, 74, 82);
   padding: 2rem;
   font-size: 1.8rem;
 }
@@ -393,6 +394,11 @@ p {
 
   .nav__list {
     flex-direction: row;
+    margin-left: 8rem;
+  }
+
+  .nav__links {
+    margin-left: -1rem;
   }
 }
 
@@ -436,10 +442,38 @@ p {
   color: var(--grayish-blue);
   text-decoration: none;
   text-shadow: 0 0 black;
+  transition: all 0.2s;
 }
 
 .list__item a:hover {
   color: var(--lime-green);
+}
+
+@media screen and (min-width: 1024px) {
+  .nav .list__item {
+    position: relative;
+  }
+
+  .nav .list__item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2rem;
+    width: 0;
+    height: 4px;
+    background-image: linear-gradient(
+      to right,
+      var(--bright-cyan),
+      var(--lime-green)
+    );
+    border-radius: 4px;
+
+    transition: 0.3s;
+  }
+
+  .nav .list__item:hover::before {
+    width: 100%;
+  }
 }
 
 /* --- Footer --- */
@@ -466,6 +500,10 @@ p {
   gap: 3rem;
 }
 
+.footer-icon path {
+  transition: all 0.3s;
+}
+
 .footer-icon:hover path {
   fill: var(--lime-green);
 }
@@ -490,6 +528,7 @@ p {
   color: var(--light-grayish-blue);
   opacity: 0.8;
   text-decoration: none;
+  transition: 0.2s;
 }
 
 .footer-list a:hover {
@@ -568,7 +607,3 @@ p {
 /* -------------------------------------------------- */
 /* -------------------------------------------------- */
 /* -------------------------------------------------- */
-
-.logo-test path {
-  fill: white;
-}
